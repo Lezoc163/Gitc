@@ -1,12 +1,26 @@
-#include<stdio.h>
+ï»¿#include <stdio.h>
+#include <stdlib.h>
 
-int main(int argc, char** argv)
+struct htentry {
+	char* item;
+	int count;
+	struct htentry* next;
+};
+
+struct htentry ht_table[256];
+
+void ht_init(void) {
+	/* ä¿®å¤ï¼šç»†èŠ‚ */
+}
+
+int main(int argc, char* argv[])
 {
 	/*
-	 * ´òÓ¡ÎÄ¼şÖĞ·¢ÏÖµÃµ¥´ÊµÃÖ±·½Í¼¡£
-	 * "µ¥´Ê"ÊÇÓÃÈÎºÎ¿Õ¸ñ·Ö¸ôµÄ×Ö·û¡£
-	 * µ¥´ÊµÄÅÅÁĞÃ»ÓĞÈÎºÎË³Ğò¡£
-	 * ĞŞÕı£ºÈÔÈ»ĞèÒªÊµÏÖ£¡
+	 * æ‰“å°æ–‡ä»¶ä¸­å‘ç°çš„å•è¯çš„ç›´æ–¹å›¾ã€‚
+	 * "å•è¯"æ˜¯ç”¨ä»»ä½•ç©ºæ ¼åˆ†éš”çš„å­—ç¬¦ã€‚
+	 * å•è¯çš„æ’åˆ—æ²¡æœ‰ä»»ä½•é¡ºåºã€‚
+	 * ä¿®æ­£ï¼šä»ç„¶éœ€è¦å®ç°ã€‚
 	 */
-	printf("µ¥´ÊµÄÖ±·½Í¼\n");
+	printf("å•è¯çš„ç›´æ–¹å›¾\n");
+	ht_init();
 }
