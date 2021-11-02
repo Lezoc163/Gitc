@@ -15,6 +15,23 @@ void ht_init(void) {
 
 int main(int argc, char* argv[])
 {
+	FILE* f;
+	errno_t err;
+	
+	if (argc != 2)
+	{
+		printf("用法：%s文件名\n",argv[0]);
+		exit(EXIT_FAILURE);
+	}
+
+	if ((err = fopen_s(&f, argv[1], "r")) != 0)
+	{
+		printf("不能打开%s\n", argv[1]);
+		exit(EXIT_FAILURE);
+	}
+
+	if (f == 0)
+		exit(-1);
 	/*
 	 * 打印文件中发现的单词的直方图。
 	 * "单词"是用任何空格分隔的字符。
