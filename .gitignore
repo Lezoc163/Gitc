@@ -1,0 +1,7 @@
+#忽略Debug目录下的文件
+Debug/*
+#其他文件
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
