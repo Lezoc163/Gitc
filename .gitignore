@@ -5,3 +5,6 @@ Debug/*
 *.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
+#忽略.vs目录下的文件
+.vs/*
+.gitattributes
